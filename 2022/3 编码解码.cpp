@@ -1,40 +1,59 @@
-#include <bits/stdc++.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-using namespace std;
-
-using LL = long long;
+#define M 1000
 
 
 int main() {
-	map<char, int> MP;
-	for (int i = 0; i < 26; i++) {
-		MP['A' + i] = 10 + i;
-	}
-	for (int i = 0; i < 10; i++) {
-		MP['0' + i] = i;
-	}
-	for (int i = 0; i < 26; i++) {
-		MP['a' + i] = -11 - i;
+	char str[M] = {};
+	gets(str);
+	int len;
+	len = strlen(str);
+	printf("%d\n", len);
+	printf("%d", 'a');
+	for (int i = 0; i < len; i++) {
+		if (str[i] >= 65 && str[i] <= 90) {
+			printf("%d", str[i] - 55);
+		}
+		if (str[i] >= 48 && str[i] <= 57) {
+			printf("%d", str[i] - 48);
+		}
+		if (str[i] >= 97 && str[i] <= 122) {
+			printf("%d", str[i] * -1 + 86);
+		}
+		if (str[i] == '!') {
+			printf("-1");
+		}
+		if (str[i] == '@') {
+			printf("-2");
+		}
+		if (str[i] == '#') {
+			printf("-3");
+		}
+		if (str[i] == '$') {
+			printf("-4");
+		}
+		if (str[i] == '%') {
+			printf("-5");
+		}
+		if (str[i] == '^') {
+			printf("-6");
+		}
+		if (str[i] == '&') {
+			printf("-7");
+		}
+		if (str[i] == '*') {
+			printf("-8");
+		}
+		if (str[i] == '(') {
+			printf("-9");
+		}
+		if (str[i] == ')') {
+			printf("-10");
+		}
 	}
 
-	MP['!'] = -1;
-	MP['@'] = -2;
-	MP['#'] = -3;
-	MP['$'] = -4;
-	MP['%'] = -5;
-	MP['?'] = -6;
-	MP['&'] = -7;
-	MP['*'] = -8;
-	MP['('] = -9;
-	MP[')'] = -10;
-
-	string str;
-	cin >> str;
-	cout << str.size() << endl;
-	for (int i = 0; i < str.size() - 1; i++) {
-		cout << MP[str[i]] << " ";
-	}
-	cout << MP[str[str.size() - 1]] << endl;
 
 	return 0;
 }
