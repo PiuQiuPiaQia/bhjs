@@ -15,7 +15,7 @@ int main() {
 	}
 
 	if (ans != 1e18) {
-		printf("%d", ans);
+		printf("%lld", ans);
 	} else {
 		printf("DIV 0");
 	}
