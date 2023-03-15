@@ -10,5 +10,4 @@ int main() {
   res = h * h * h + d * d * d + u * u * u;
   printf("%d", res == num);
   return 0;
-  ;
 }
