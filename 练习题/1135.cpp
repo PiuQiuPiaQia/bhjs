@@ -7,7 +7,7 @@ int main() {
   int temp = 0;
   double b = 0.1;
   for (int i = 1; i <= n; i++) {
-    b *= 10;
+    b *= 10; 
     temp += a * b;
     sum += temp;
     // printf("%d\n", temp);
